@@ -26,6 +26,7 @@ public class Topic_01_Check_Environment {
 // Login Page Url matching
 		String loginPageUrl = driver.getCurrentUrl();
 		Assert.assertEquals(loginPageUrl, "http://demo.guru99.com/v4/");
+
 	}
 
 	@Test
