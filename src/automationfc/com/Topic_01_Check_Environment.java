@@ -46,5 +46,14 @@ public class Topic_01_Check_Environment {
 	public void afterClass() {
 		driver.quit();
 	}
+	
+	public void sleepInSeond(long timeInSecond) {
+		try {
+			Thread.sleep(timeInSecond*1000);
+		} catch (InterruptedException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+	}
 
 }

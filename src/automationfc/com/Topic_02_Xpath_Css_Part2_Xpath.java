@@ -19,7 +19,7 @@ public class Topic_02_Xpath_Css_Part2_Xpath {
 		driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
 		driver.manage().window().maximize();
 		driver.get("http://live.demoguru99.com/index.php/customer/account/login/");
-	}
+	}	
 
 	@Test
 	public void TC_01_Empty_Email_Password() {		
