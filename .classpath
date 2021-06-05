@@ -6,6 +6,15 @@
 		</attributes>
 	</classpathentry>
 	<classpathentry kind="src" path="src"/>
-	<classpathentry kind="lib" path="lib/selenium-server-standalone-2.53.1.jar"/>
+	<classpathentry kind="lib" path="lib/selenium-server-standalone-2.53.1.jar" sourcepath="lib/selenium-java-2.53.1-srcs.jar">
+		<attributes>
+			<attribute name="javadoc_location" value="https://www.selenium.dev/selenium/docs/api/java/overview-summary.html"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry kind="lib" path="lib/selenium-server-2.53.1-javadoc.jar" sourcepath="lib/selenium-server-2.53.1-javadoc.jar">
+		<attributes>
+			<attribute name="javadoc_location" value="https://www.selenium.dev/selenium/docs/api/java/overview-summary.html"/>
+		</attributes>
+	</classpathentry>
 	<classpathentry kind="output" path="bin"/>
 </classpath>
