@@ -249,7 +249,7 @@ public class Topic_06_Web_Element_Custom_DropDown {
 		
 		sendKey(parentBy, expectedText);
 		
-		List<WebElement> allItems = explicitWait.until(ExpectedConditions.visibilityOfAllElementsLocatedBy(childBy));
+		List<WebElement> allItems = explicitWait.until(ExpectedConditions.presenceOfAllElementsLocatedBy(childBy));
 		
 		for (WebElement webElm : allItems) {
 			if(webElm.getText().trim().equals(expectedText)) {

@@ -27,7 +27,7 @@ public class Topic_08_Button_Radio_Checkbox {
 		jsExecutor = (JavascriptExecutor) driver;
 	}
 	
-	//@Test
+	@Test
 	public void TC_01_Button() {
 		driver.get("https://www.fahasa.com/customer/account/create?attempt=1");
 		By popupLoginBy = By.cssSelector(".popup-login-tab-login");
@@ -74,9 +74,11 @@ public class Topic_08_Button_Radio_Checkbox {
 		//Assert.assertEquals(getText(By.xpath("//input[@id='login_password']/parent::div/following-sibling::div")), "Thông tin này không thể để trống");
 	}
 	
-	//@Test
+	@Test
 	public void TC_02_RadioBtn_Default() {
 		driver.get("https://demos.telerik.com/kendo-ui/radiobutton/index");
+		
+		jsExecutor.executeScript("arguments[0].scrollIntoView(true);", driver.findElement(By.xpath("//h1[@class = 'kd-title']")));
 		
 		click(By.xpath("//label[text() = '1.6 Diesel, 77kW']/preceding-sibling::input"));
 		sleepThreading(2);
@@ -93,6 +95,8 @@ public class Topic_08_Button_Radio_Checkbox {
 	public void TC_03_Checkbox_Default() {
 		driver.get("https://demos.telerik.com/kendo-ui/checkbox/index");
 		
+		jsExecutor.executeScript("arguments[0].scrollIntoView(true);", driver.findElement(By.xpath("//h1[@class = 'kd-title']")));
+		
 		click(By.xpath("//label[text() = 'Luggage compartment cover']/preceding-sibling::input"));
 		click(By.xpath("//label[text() = 'Dual-zone air conditioning']/preceding-sibling::input"));
 		click(By.xpath("//label[text() = 'Rain sensor']/preceding-sibling::input"));
@@ -107,6 +111,9 @@ public class Topic_08_Button_Radio_Checkbox {
 		driver.get("https://demos.telerik.com/kendo-ui/checkbox/index");
 		
 		List<WebElement> allItems = driver.findElements(By.xpath("//input[@type = 'checkbox' and not(@disabled)]"));
+		
+		jsExecutor.executeScript("arguments[0].scrollIntoView(true);", driver.findElement(By.xpath("//h1[@class = 'kd-title']")));
+		sleepThreading(3);
 		
 		for (WebElement item : allItems) {
 			if(!item.isSelected()) {
@@ -125,7 +132,7 @@ public class Topic_08_Button_Radio_Checkbox {
 		}		 
 	}
 	
-	//@Test
+	@Test
 	public void TC_04_Custom_Radio_Checkbox() {
 		driver.get("https://material.angular.io/components/radio/examples");
 		By autumnRadioBtn = By.xpath("//span[contains(text(), 'Winter')]/preceding-sibling::span/input");
@@ -134,7 +141,7 @@ public class Topic_08_Button_Radio_Checkbox {
 		Assert.assertTrue(driver.findElement(autumnRadioBtn).isSelected());
 	}
 	
-	//@Test
+	@Test
 	public void TC_05_Custom_Radio_Checkbox_Google_Form() {
 		//Radio Button
 		driver.get("https://docs.google.com/forms/d/e/1FAIpQLSfiypnd69zhuDkjKgqvpID9kwO29UCzeCVrGGtbNPZXQok0jA/viewform");

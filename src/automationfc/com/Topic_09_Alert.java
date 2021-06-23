@@ -6,7 +6,6 @@ import org.openqa.selenium.Alert;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
-import org.openqa.selenium.support.ui.ExpectedCondition;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.Assert;
@@ -35,6 +34,7 @@ public class Topic_09_Alert {
 		sleepThreading(2);
 		driver.findElement(By.xpath("//button[text()='Click for JS Alert']")).click();
 		
+		//wait and switch to the alert
 		alert = explicitWait.until(ExpectedConditions.alertIsPresent());
 		
 		Assert.assertEquals(alert.getText(), "I am a JS Alert");
